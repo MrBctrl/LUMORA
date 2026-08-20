@@ -1,4 +1,4 @@
-# LUMORA — Flagship Website
+# LUMORA Website
 
 Houses, apartments, buildings and land, plus the moving and upkeep services that come after
 you sign. Built for NEXCRAFT Creative Studio's LUMORA flagship, following the locked Brand

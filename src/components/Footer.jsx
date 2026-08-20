@@ -34,7 +34,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <span>© {YEAR} LUMORA, a NEXCRAFT Creative Studio flagship.</span>
+          <span>© {YEAR} LUMORA.</span>
           <span>Built with light, structure, and care.</span>
         </div>
       </div>

@@ -7,7 +7,7 @@ export default function Hero() {
       </div>
 
       <div className="container hero-inner">
-        <p className="eyebrow hero-eyebrow">NEXCRAFT Flagship · Property &amp; Living</p>
+        <p className="eyebrow hero-eyebrow">· Property &amp; Living</p>
         <h1 className="hero-title">
           Light reveals <em>home.</em>
         </h1>
