@@ -1,13 +1,26 @@
+import { useState } from 'react';
+
 export default function Hero() {
+  const [imgFailed, setImgFailed] = useState(false);
+
   return (
     <section className="hero" id="top">
       <div className="hero-scene" aria-hidden="true">
+        {!imgFailed && (
+          <img
+            src="/images/hero/hero.jpg"
+            alt=""
+            className="hero-photo"
+            onError={() => setImgFailed(true)}
+          />
+        )}
+        <div className="hero-overlay" />
         <div className="hero-beam" />
         <div className="hero-grid" />
       </div>
 
       <div className="container hero-inner">
-        <p className="eyebrow hero-eyebrow">· Property &amp; Living</p>
+        <p className="eyebrow hero-eyebrow">NEXCRAFT Flagship · Property &amp; Living</p>
         <h1 className="hero-title">
           Light reveals <em>home.</em>
         </h1>

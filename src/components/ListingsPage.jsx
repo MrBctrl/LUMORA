@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { categories, categoryOrder } from '../listingsData';
 import ListingModal from './ListingModal';
+import ImageFrame from './ImageFrame';
 
 export default function ListingsPage() {
   const { category } = useParams();
@@ -80,9 +81,9 @@ export default function ListingsPage() {
           <ul className="listings-grid">
             {items.map((item) => (
               <li key={item.id} className="listing-card" onClick={() => setSelected(item)}>
-                <div className="listing-image" style={{ background: item.tone }}>
+                <ImageFrame src={item.image} alt={item.name} tone={item.tone} className="listing-image">
                   <span className="listing-tag">{item.tag}</span>
-                </div>
+                </ImageFrame>
                 <div className="listing-body">
                   <div className="listing-row">
                     <h3>{item.name}</h3>

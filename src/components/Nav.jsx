@@ -50,11 +50,13 @@ export default function Nav() {
         </button>
       </div>
 
-      <div className="nav-mobile">
-        {LINKS.map((l) => (
-          <a key={l.href} href={l.href} onClick={() => setOpen(false)}>{l.label}</a>
-        ))}
-        <a href="#contact" className="btn btn-on-dark" onClick={() => setOpen(false)}>Book a Consultation</a>
+      <div className="nav-mobile-wrap">
+        <div className="nav-mobile">
+          {LINKS.map((l) => (
+            <a key={l.href} href={l.href} onClick={() => setOpen(false)}>{l.label}</a>
+          ))}
+          <a href="#contact" className="btn btn-on-dark" onClick={() => setOpen(false)}>Book a Consultation</a>
+        </div>
       </div>
     </header>
   );

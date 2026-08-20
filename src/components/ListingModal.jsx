@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import ImageFrame from './ImageFrame';
 
 export default function ListingModal({ listing, onClose }) {
   useEffect(() => {
@@ -33,9 +34,9 @@ export default function ListingModal({ listing, onClose }) {
           </svg>
         </button>
 
-        <div className="modal-image" style={{ background: listing.tone }}>
+        <ImageFrame src={listing.image} alt={listing.name} tone={listing.tone} className="modal-image">
           <span className="modal-tag">{listing.tag}</span>
-        </div>
+        </ImageFrame>
 
         <div className="modal-body">
           <h3 id="modal-title">{listing.name}</h3>

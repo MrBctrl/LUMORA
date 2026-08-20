@@ -1,4 +1,4 @@
-# LUMORA Website
+# LUMORA — Flagship Website
 
 Houses, apartments, buildings and land, plus the moving and upkeep services that come after
 you sign. Built for NEXCRAFT Creative Studio's LUMORA flagship, following the locked Brand
@@ -53,3 +53,27 @@ Listings, prices, and descriptions in `src/listingsData.js` and `src/data.js` ar
 content grounded in the locked LUMORA brand strategy, not real inventory. Swap them for actual
 listings, pricing and contact details before launch. The contact form confirms client-side
 only for now, wire it to your form handler or CRM before going live.
+
+## Adding your own photos
+Every image on the site is a real `<img>` tag pointing into `public/images/`. Right now
+those files don't exist, so you'll see a soft gradient placeholder instead of a broken
+image icon. Drop a photo in with the exact filename below and it takes over automatically,
+no code changes needed.
+
+```
+public/images/hero/hero.jpg                        Hero background (wide, landscape)
+
+public/images/categories/house.jpg                  Homepage "Houses" category card
+public/images/categories/apartment.jpg               Homepage "Apartments" category card
+public/images/categories/building.jpg                 Homepage "Buildings" category card
+public/images/categories/land.jpg                     Homepage "Land" category card
+
+public/images/listings/house/h1.jpg  ...  h6.jpg      6 house listings
+public/images/listings/apartment/a1.jpg  ...  a4.jpg    4 apartment listings
+public/images/listings/building/b1.jpg  ...  b4.jpg     4 building listings
+public/images/listings/land/l1.jpg  ...  l4.jpg          4 land listings
+```
+
+Match each listing's id to its data entry in `src/listingsData.js` if you want to check
+which photo goes where (e.g. `h1` is The Aldergate Residence). Recommended size: at least
+1200px wide, landscape orientation, JPG or WEBP.

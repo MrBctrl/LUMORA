@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import useReveal from '../hooks/useReveal';
-import { categories, categoryOrder } from '../listingsData';
+import { categories, categoryOrder, categoryCover } from '../listingsData';
+import ImageFrame from './ImageFrame';
 
 function CategoryCard({ catKey, i }) {
   const ref = useReveal();
@@ -9,9 +10,9 @@ function CategoryCard({ catKey, i }) {
   return (
     <li ref={ref} className="reveal category-card" style={{ transitionDelay: `${i * 90}ms` }}>
       <Link to={`/listings/${catKey}`} className="category-card-link">
-        <div className="category-image" style={{ background: cat.items[0].tone }}>
+        <ImageFrame src={categoryCover[catKey]} alt={cat.label} tone={cat.items[0].tone} className="category-image">
           <span className="category-count">{count}+ listed</span>
-        </div>
+        </ImageFrame>
         <div className="category-body">
           <h3>{cat.label}</h3>
           <p>{cat.intro}</p>

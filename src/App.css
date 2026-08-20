@@ -39,23 +39,31 @@
 .nav-cta { padding: 12px 24px; font-size: 13px; }
 .nav-toggle { display: none; background: none; border: none; flex-direction: column; gap: 5px; padding: 6px; }
 .nav-toggle span { width: 22px; height: 1.5px; background: var(--ink); display: block; transition: transform 0.3s, opacity 0.3s; }
-.nav-mobile { display: none; }
+
+.nav-mobile-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows 0.38s ease;
+}
+.nav-open .nav-mobile-wrap { grid-template-rows: 1fr; }
+.nav-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+.nav-open .nav-mobile { visibility: visible; }
 
 @media (max-width: 880px) {
   .nav-links, .nav-cta { display: none; }
   .nav-toggle { display: flex; }
   .nav-inner { height: 68px; }
-  .nav-mobile {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    padding: 0 var(--edge) 28px;
-    max-height: 0;
-    overflow: hidden;
-    background: var(--cream);
-    transition: max-height 0.4s ease;
-  }
-  .nav-open .nav-mobile { max-height: 420px; border-bottom: 1px solid var(--line); }
+  .nav-mobile-wrap { background: var(--cream); }
+  .nav-open .nav-mobile-wrap { border-bottom: 1px solid var(--line); }
+  .nav-mobile { padding: 0 var(--edge) 28px; }
   .nav-mobile a { padding: 13px 0; font-size: 15px; border-bottom: 1px solid var(--line); }
   .nav-mobile .btn { margin-top: 16px; justify-content: center; }
   .nav-open .nav-toggle span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
@@ -74,6 +82,11 @@
   padding-top: 84px;
 }
 .hero-scene { position: absolute; inset: 0; }
+.hero-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: radial-gradient(120% 100% at 20% 0%, rgba(43,36,27,0.86) 0%, rgba(23,19,16,0.92) 55%, rgba(16,13,10,0.96) 100%);
+}
 .hero-grid {
   position: absolute; inset: 0;
   background-image:
@@ -560,3 +573,7 @@
   .modal-body { padding: 24px 20px 28px; }
   .modal-actions .btn { flex: 1; justify-content: center; }
 }
+
+/* ============ IMAGE FRAME (placeholder -> real photo) ============ */
+.img-frame { position: relative; overflow: hidden; }
+.img-frame-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
