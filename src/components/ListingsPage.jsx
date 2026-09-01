@@ -36,8 +36,10 @@ export default function ListingsPage() {
       <header className="listings-top">
         <div className="container listings-top-inner">
           <Link to="/" className="listings-back">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 2 L4 8 L10 14" stroke="currentColor" strokeWidth="1.5" /></svg>
-            LUMORA
+           <img
+              src="/lumora-logo.png"
+              alt="Lumora logo"
+              className="listings-logo" />
           </Link>
           <div className="listings-crumbs">
             {categoryOrder.map((key) => (

@@ -34,6 +34,13 @@ body {
 
 img { max-width: 100%; display: block; }
 
+.listings-logo {
+  max-width: 26%;
+  height: auto;
+  display: block;
+  position: relative;
+}
+
 h1, h2, h3, h4 {
   font-family: var(--font-display);
   font-weight: 500;

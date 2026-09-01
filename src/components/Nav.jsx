@@ -23,13 +23,11 @@ export default function Nav() {
       <div className="container nav-inner">
         <a href="#top" className="nav-mark" onClick={() => setOpen(false)}>
           <span className="nav-mark-glyph" aria-hidden="true">
-            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-              <path d="M13 2 L13 11" stroke="currentColor" strokeWidth="1.4" />
-              <path d="M4 22 L13 11 L22 22" stroke="currentColor" strokeWidth="1.4" fill="none" />
-              <circle cx="13" cy="11" r="1.6" fill="currentColor" />
-            </svg>
+            <img
+              src="images/lumora-logo.png"
+              alt="Lumora logo"
+              className="listings-logo" />
           </span>
-          LUMORA
         </a>
 
         <nav className="nav-links" aria-label="Primary">

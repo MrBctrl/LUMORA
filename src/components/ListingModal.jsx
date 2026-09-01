@@ -29,9 +29,10 @@ export default function ListingModal({ listing, onClose }) {
         onClick={(e) => e.stopPropagation()}
       >
         <button className="modal-close" onClick={onClose} aria-label="Close">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-            <path d="M2 2 L16 16 M16 2 L2 16" stroke="currentColor" strokeWidth="1.6" />
-          </svg>
+          <img
+              src="/lumora-logo.png"
+              alt="Lumora logo"
+              className="listings-logo" />
         </button>
 
         <ImageFrame src={listing.image} alt={listing.name} tone={listing.tone} className="modal-image">
